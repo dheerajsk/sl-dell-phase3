@@ -11,64 +11,76 @@
 
 <body>
     <div class="container">
-
-        <form>
-            <div class="mb-3">
-                <label for="fname" class="form-label">First Name</label>
-                <input class="form-control" type="text">
+        <div class="row">
+            <div class="col-md-6">
+                <img style="margin: 5%; margin-top: 25%;" height="300px" width="600px"
+                    src="data:image/png;base64,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"
+                    alt="">
             </div>
+            <div class="col-md-6">
 
-            <div class="mb-3">
-                <label for="lname" class="form-label">Last Name</label>
-                <input class="form-control" type="text">
+                <form style="padding-left: 15px; border-left: 1px solid lightgrey;">
+
+                    <h1>Sign Up</h1>
+                    <br /> <br />
+                    <div class="mb-3">
+                        <label for="fname" class="form-label">First Name</label>
+                        <input class="form-control" type="text">
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="lname" class="form-label">Last Name</label>
+                        <input class="form-control" type="text">
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label" for="dob">Date of Birth</label>
+                        <input class="form-control" type="date">
+                    </div>
+
+                    <label class="form-label" for="gender">Gender</label>
+                    <div class="mb-3 form-check">
+                        <input class="form-check-input" type="radio" name="gender">
+                        <label class="form-check-label" for="gender">Male</label>
+                    </div>
+                    <div class="mb-3 form-check">
+                        <input class="form-check-input" type="radio" name="gender">
+                        <label class="form-check-label" for="gender">Female</label>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label" for="email">Email</label>
+                        <input class="form-control" type="email">
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label" for="password">Password</label>
+                        <input class="form-control" type="password">
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label" for="country">Country</label>
+                        <select class="form-select">
+                            <option value="1">India</option>
+                            <option value="2">USA</option>
+                            <option value="3">Uk</option>
+                            <option value="4">China</option>
+                        </select>
+                    </div>
+
+                    <div class="mb-3 form-check">
+                        <input class="form-check-input" type="checkbox">
+                        <label class="form-check-label" for="terms">Agree to Terms?</label>
+
+                    </div>
+
+                    <div class="mb-3">
+                        <input class="btn btn-success float-end" type="button" value="Submit">
+                    </div>
+
+                </form>
             </div>
-
-            <div class="mb-3">
-                <label class="form-label" for="dob">Date of Birth</label>
-                <input class="form-control" type="date">
-            </div>
-
-            <label class="form-label" for="gender">Gender</label>
-            <div class="mb-3 form-check">
-                <input class="form-check-input" type="radio" name="gender">
-                <label class="form-check-label" for="gender">Male</label>
-            </div>
-            <div class="mb-3 form-check">
-                <input class="form-check-input" type="radio" name="gender">
-                <label class="form-check-label" for="gender">Female</label>
-            </div>
-
-            <div class="mb-3">
-                <label class="form-label" for="email">Email</label>
-                <input class="form-control" type="email">
-            </div>
-
-            <div class="mb-3">
-                <label class="form-label" for="password">Password</label>
-                <input class="form-control" type="password">
-            </div>
-
-            <div class="mb-3">
-                <label class="form-label" for="country">Country</label>
-                <select class="form-select">
-                    <option value="1">India</option>
-                    <option value="2">USA</option>
-                    <option value="3">Uk</option>
-                    <option value="4">China</option>
-                </select>
-            </div>
-
-            <div class="mb-3 form-check">
-                <input class="form-check-input" type="checkbox">
-                <label class="form-check-label" for="terms">Agree to Terms?</label>
-
-            </div>
-
-            <div class="mb-3">
-                <input class="btn btn-success float-end" type="button" value="Submit">
-            </div>
-
-        </form>
+        </div>
 
     </div>
 </body>
