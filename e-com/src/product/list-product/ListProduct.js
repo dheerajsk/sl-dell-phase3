@@ -11,12 +11,11 @@ function ListProduct() {
 
     // Do something after component is rendered
     useEffect(() => {
-        var items = [];
-        items.push({ id: 1, name: 'Product 1', image: '', detail: 'This is a test', price: 100, isActive: true });
-        items.push({ id: 2, name: 'Product 2', image: '', detail: 'This is a test', price: 200, isActive: true });
-        items.push({ id: 3, name: 'Product 3', image: '', detail: 'This is a test', price: 300, isActive: false });
-        items.push({ id: 4, name: 'Product 4', image: '', detail: 'This is a test', price: 400, isActive: true });
-        setProducts(items);
+        fetch("http://localhost:56622/api/book")
+            .then(res=>res.json())
+                .then(res=>{
+                    setProducts(res);
+                })
     }, []);
 
     return (
@@ -31,7 +30,7 @@ function ListProduct() {
                             <th scope="col">Image</th>
                             <th scope="col">Detail</th>
                             <th scope="col">Price</th>
-                            <th scope="col">IsActive</th>
+                            <th scope="col">Author</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -40,10 +39,10 @@ function ListProduct() {
                                 <tr>
                                     <td>{product.id}</td>
                                     <td>{product.name}</td>
-                                    <td>{product.image}</td>
+                                    <td>{product.imageUrl}</td>
                                     <td>{product.detail}</td>
                                     <td>{product.price}</td>
-                                    <td>{product.isActive ? 'Yes' : 'No'}</td>
+                                    <td>{product.author}</td>
                                 </tr>
                             )
                         }

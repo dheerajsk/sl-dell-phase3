@@ -1,14 +1,20 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Login from './admin/login/Login';
+import App from './App';
 import './index.css';
 import ListProduct from './product/list-product/ListProduct';
+import ProductForm from './product/product-form/ProductForm';
+import {BrowserRouter} from 'react-router-dom';
+
+
 // import App from './App';
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
-    // <Login />,
-    <ListProduct />,
+  <BrowserRouter>
+    <App />
+  </BrowserRouter>,
   document.getElementById('root')
 );
 
