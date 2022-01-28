@@ -5,15 +5,28 @@ import './ProductForm.css'
 function ProductForm() {
 
 
-    function handleSubmit(event){
+    function handleSubmit(event) {
         event.preventDefault();
         console.log(event.target.elements);
-        const name=event.target.elements[0];
-        const author=event.target.elements[1];
-        const imgSrc=event.target.elements[2];
-        const details=event.target.elements[3];
-        const price=event.target.elements[4];
-        
+        const name = event.target.elements[0];
+        const author = event.target.elements[1];
+        const imgSrc = event.target.elements[2];
+        const details = event.target.elements[3];
+        const price = event.target.elements[4];
+
+        fetch("http://localhost:56622/api/book", {
+            method: "POST",
+            body: JSON.stringify({
+                name: name.value,
+                detail: details.value,
+                price: price.value,
+                author: author.value,
+                imgSrc: imgSrc.value
+            })
+        })
+            .then(
+                () => { console.log("Data is saved") }
+            );
     }
 
     return (
